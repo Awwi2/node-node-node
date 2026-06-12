@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://103exoak5d3x"]
+
+[ext_resource type="Script" uid="uid://dcsd6pw6m6dv6" path="res://scripts/tile_manager.gd" id="1_q7lps"]
+
+[node name="backpack" type="Node2D" unique_id=582537461]
+
+[node name="tile_manager" type="Node2D" parent="." unique_id=437700286]
+script = ExtResource("1_q7lps")
