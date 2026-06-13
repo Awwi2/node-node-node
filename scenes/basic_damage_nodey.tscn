@@ -1,10 +1,27 @@
 [gd_scene format=3 uid="uid://c6ipwji5grl0y"]
 
 [ext_resource type="Script" uid="uid://l3es1ojh6pdv" path="res://scripts/basic_damage_nodey.gd" id="1_whj1g"]
-[ext_resource type="Texture2D" uid="uid://de1hyntfuqtqm" path="res://icon.svg" id="2_ee6d1"]
+[ext_resource type="Texture2D" uid="uid://3cj7up7635k2" path="res://art/nodes.png" id="2_ee6d1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52yqj"]
+atlas = ExtResource("2_ee6d1")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v2x8s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52yqj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="basic_damage_nodey" type="Node2D" unique_id=187735481]
 script = ExtResource("1_whj1g")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=971180906]
-texture = ExtResource("2_ee6d1")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=858086756]
+texture_filter = 1
+rotation = 1.5707964
+sprite_frames = SubResource("SpriteFrames_v2x8s")

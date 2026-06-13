@@ -18,6 +18,13 @@ config/icon="res://icon.svg"
 [autoload]
 
 TileManager="*uid://dcsd6pw6m6dv6"
+OrbManager="*uid://kuwhe1e83ly4"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/scale=4.0
 
 [physics]
 
