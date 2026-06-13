@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="node-node-node"
+run/main_scene="uid://103exoak5d3x"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+TileManager="*uid://dcsd6pw6m6dv6"
 
 [physics]
 
