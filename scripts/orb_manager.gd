@@ -21,8 +21,11 @@ func remove_orb(orb: Orb):
 
 func subtick(): # handles all of the orb movement and orb collision detection
 	for o in orbs: 
+		o.check_collision() #sadly has to be done, lets hope -
+		#-its like kinda performant
 		o.move()
 		
 func tick():
-	for o in orbs:
-		o.check_collision()
+	pass
+	#for o in orbs:
+		#o.check_collision()

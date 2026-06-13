@@ -1,34 +1,35 @@
 extends Node2D
 
+const OFFSET_X = 13
+const OFFSET_Y = 10
+
 const RELAY = preload("res://scenes/nodes/relay_node.tscn")
 const PLUS_NODE = preload("uid://e0dh5t3j38u5")
 
 const ORB = preload("res://scenes/orb.tscn")
 
-const TICK_RATE = 60 # for 1 Tick per second
+const TICK_RATE = 30 # for 1 Tick per second
 var ticker:int = 0
 
 var tiles : Dictionary[Vector2i,Nodey] = {}
-const GRID_SIZE: int = 32
+const GRID_SIZE: int = 16
 var orbs : Array[Orb]  
 
 var generator_node: Nodey
 
 func _ready():
+	var b4: TextureButton = get_node("/root/backpack/ui_border/SpawnButton4")
+	b4.pressed.connect(_on_spawn_button4_pressed)
 	orbs = []
-	generator_node = RELAY.instantiate()
-	generator_node.position = Vector2(0, 64)
-	tiles.set(generator_node.position, generator_node)
-	add_sibling.call_deferred(generator_node)
 	
 	var test_node:Nodey = RELAY.instantiate()
-	test_node.position = Vector2(64, 64)
+	test_node.position = Vector2(16*1+21, 16*3+18)
 	test_node.ports = [Vector2i.LEFT,Vector2i.RIGHT, Vector2i.UP]
 	tiles.set(test_node.position, test_node)
 	add_sibling.call_deferred(test_node)
 	
 	var plus_node:Nodey = PLUS_NODE.instantiate()
-	plus_node.position = Vector2(128,64)
+	plus_node.position = Vector2(16*3+21,16*3+18)
 	plus_node.ports = [Vector2i.LEFT, Vector2i.RIGHT]
 	#plus_node.init_node(Vector2(128, 64), [Vector2i.LEFT, Vector2i.DOWN])
 	tiles.set(plus_node.position, plus_node)
@@ -53,7 +54,7 @@ func _physics_process(delta: float) -> void: #runs x60 per second
 
 func tick():
 	#temp
-	generator_node.generate_orb(Vector2i.RIGHT)
+	#generator_node.generate_orb(Vector2i.RIGHT)
 	OrbManager.tick()
 	
 	#generate new orbs from spawner nodes
@@ -63,3 +64,13 @@ func get_nodey(pos: Vector2i):
 	return tiles.get(pos)
 func is_open(pos: Vector2i) -> bool:
 	return tiles.get(pos) == null
+	
+func _on_spawn_button4_pressed():
+	var button_pos = get_node("/root/backpack/ui_border/SpawnButton4").position
+	spawn_button_orb(button_pos)
+	
+func spawn_button_orb(button_pos):
+	var new_orb:Orb = ORB.instantiate()
+	new_orb.init(button_pos + Vector2(2,4), Vector2i.RIGHT)
+	OrbManager.add_orb(new_orb)
+	

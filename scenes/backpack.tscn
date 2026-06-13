@@ -1,5 +1,60 @@
 [gd_scene format=3 uid="uid://103exoak5d3x"]
 
+[ext_resource type="Texture2D" uid="uid://c7i8pn6xfw448" path="res://art/pack_edge.png" id="1_q7lps"]
+[ext_resource type="Texture2D" uid="uid://4vob5okv72b7" path="res://art/pack.png" id="2_5gcru"]
+[ext_resource type="Texture2D" uid="uid://dma7mi7e8gwk7" path="res://art/Button_idle.png" id="3_8usr3"]
+[ext_resource type="Texture2D" uid="uid://b2dh1o7bapg40" path="res://art/Button_hover.png" id="4_fytde"]
+[ext_resource type="Texture2D" uid="uid://c3c1uc3xbucvu" path="res://art/Button_pressed.png" id="4_yov5u"]
+[ext_resource type="Texture2D" uid="uid://bseqs2w5vwdfn" path="res://art/Button_disabled.png" id="6_owf8y"]
+[ext_resource type="PackedScene" uid="uid://dhvihmtjjiwj2" path="res://scenes/orb.tscn" id="7_owf8y"]
+
 [node name="backpack" type="Node2D" unique_id=582537461]
 
-[node name="tile_manager" type="Node2D" parent="." unique_id=437700286]
+[node name="field" type="Sprite2D" parent="." unique_id=477508245]
+z_index = -2
+texture_filter = 1
+texture = ExtResource("2_5gcru")
+offset = Vector2(160, 90)
+
+[node name="ui_border" type="Sprite2D" parent="." unique_id=755061829]
+texture_filter = 1
+texture = ExtResource("1_q7lps")
+offset = Vector2(160, 90)
+
+[node name="SpawnButton1" type="TextureButton" parent="ui_border" unique_id=1385633655]
+offset_left = 3.0
+offset_top = 14.0
+offset_right = 11.0
+offset_bottom = 22.0
+texture_normal = ExtResource("3_8usr3")
+texture_pressed = ExtResource("4_yov5u")
+texture_hover = ExtResource("4_fytde")
+texture_disabled = ExtResource("6_owf8y")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="SpawnButton4" type="TextureButton" parent="ui_border" unique_id=2031887295]
+anchors_preset = -1
+anchor_left = 0.034
+anchor_top = 0.38900003
+anchor_right = 0.034
+anchor_bottom = 0.38900003
+offset_left = -7.880001
+offset_top = -8.020004
+offset_right = 0.11999893
+offset_bottom = -0.020004272
+texture_normal = ExtResource("3_8usr3")
+texture_pressed = ExtResource("4_yov5u")
+texture_hover = ExtResource("4_fytde")
+texture_disabled = ExtResource("6_owf8y")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="Node2D" parent="." unique_id=2131568563 instance=ExtResource("7_owf8y")]
+position = Vector2(5, 66)
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=424840303]
+offset_left = 181.0
+offset_top = 2.0
+offset_right = 306.0
+offset_bottom = 177.0

@@ -1,13 +1,27 @@
 [gd_scene format=3 uid="uid://dhvihmtjjiwj2"]
 
 [ext_resource type="Script" uid="uid://dht2gurwm4v0p" path="res://scripts/orb.gd" id="1_ktqa0"]
+[ext_resource type="Texture2D" uid="uid://df1h0xflfmy5b" path="res://art/orbs.png" id="2_ubfm6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6cbt"]
+atlas = ExtResource("2_ubfm6")
+region = Rect2(0, 0, 4, 4)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vnh3v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g6cbt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D" unique_id=2131568563]
 z_index = -1
 script = ExtResource("1_ktqa0")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=276484205]
-offset_left = -2.0
-offset_top = -2.0
-offset_right = 2.0
-offset_bottom = 2.0
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=945245937]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_vnh3v")

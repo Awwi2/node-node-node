@@ -2,7 +2,6 @@ extends Nodey
 
 
 func process_orb(orb:Orb):
-	print("processed")
 	if (orb.direction * -1) not in ports:
 		OrbManager.remove_orb(orb)
 		return
@@ -16,7 +15,6 @@ func tick(tick):
 	if queued_orbs.is_empty():
 		return
 	elif tick == 10:
-		print("tick was 10")
 		generate_orbs(queued_orbs.pop_back())
 		
 
@@ -26,5 +24,7 @@ func generate_orbs(orb:Orb):
 	remaining_ports.erase(port_in)
 	for p in remaining_ports:
 		generate_orb(p)
+		
+
 		
 	

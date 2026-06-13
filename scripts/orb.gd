@@ -2,6 +2,7 @@ class_name Orb
 extends Node2D
 var direction:Vector2i = Vector2i.RIGHT
 var initial_position: Vector2 
+var parent_node: Nodey #node that this Orb was spawned by 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -20,16 +21,16 @@ func move():
 	#we want to cover the whole GRID_SIZE distance in 1 Tick
 	#This method is called every subtick
 	position += Vector2((direction * TileManager.GRID_SIZE) * 1.0/TileManager.TICK_RATE)
-	#check for collision with a node
 
 func check_collision():
-	print(position)
 	if position == initial_position:
 		return
 	var node = TileManager.get_nodey(position.round()) 
+	
 	#if we collide, give the orb to the node, that we collided with( the colidee will delete this orb)
-	if node == null:
+	if node == null or node.position == initial_position.round():
 		return 
+
 	node.process_orb(self)
 	
 	
