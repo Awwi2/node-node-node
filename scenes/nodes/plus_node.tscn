@@ -1,10 +1,11 @@
-[gd_scene format=3 uid="uid://c6ipwji5grl0y"]
+[gd_scene format=3 uid="uid://e0dh5t3j38u5"]
 
-[ext_resource type="Script" uid="uid://l3es1ojh6pdv" path="res://scripts/basic_damage_nodey.gd" id="1_whj1g"]
-[ext_resource type="Texture2D" uid="uid://3cj7up7635k2" path="res://art/nodes.png" id="2_ee6d1"]
+[ext_resource type="Script" uid="uid://dpwbvq7rt3mbm" path="res://scenes/nodes/plus_node.gd" id="1_tai3p"]
+[ext_resource type="PackedScene" uid="uid://ctu6xhgevyfit" path="res://scenes/pipes.tscn" id="2_p4uqw"]
+[ext_resource type="Texture2D" uid="uid://3cj7up7635k2" path="res://art/nodes.png" id="3_hxmsb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_52yqj"]
-atlas = ExtResource("2_ee6d1")
+atlas = ExtResource("3_hxmsb")
 region = Rect2(0, 16, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_v2x8s"]
@@ -19,9 +20,10 @@ animations = [{
 }]
 
 [node name="basic_damage_nodey" type="Node2D" unique_id=187735481]
-script = ExtResource("1_whj1g")
+script = ExtResource("1_tai3p")
+
+[node name="Pipes" parent="." unique_id=1129022952 instance=ExtResource("2_p4uqw")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=858086756]
 texture_filter = 1
-rotation = 1.5707964
 sprite_frames = SubResource("SpriteFrames_v2x8s")

@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://ctu6xhgevyfit"]
+
+[ext_resource type="Script" uid="uid://c860vlrmhq5o1" path="res://scripts/pipes.gd" id="1_3ahhd"]
+[ext_resource type="Texture2D" uid="uid://cbvv8pj1ufsvr" path="res://art/pipe.png" id="1_r1kwc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_og227"]
+atlas = ExtResource("1_r1kwc")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l4tgv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_og227")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nq3k0"]
+atlas = ExtResource("1_r1kwc")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3y2w3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nq3k0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tudpm"]
+atlas = ExtResource("1_r1kwc")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lt02a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tudpm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wv5tk"]
+atlas = ExtResource("1_r1kwc")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_chqc6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wv5tk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Pipes" type="Node2D" unique_id=1129022952]
+script = ExtResource("1_3ahhd")
+
+[node name="PipeUp" type="AnimatedSprite2D" parent="." unique_id=949563731]
+visible = false
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_l4tgv")
+
+[node name="PipeRight" type="AnimatedSprite2D" parent="." unique_id=1682035627]
+visible = false
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_3y2w3")
+
+[node name="PipeDown" type="AnimatedSprite2D" parent="." unique_id=1312356607]
+visible = false
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_lt02a")
+
+[node name="PipeLeft" type="AnimatedSprite2D" parent="." unique_id=145462822]
+visible = false
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_chqc6")

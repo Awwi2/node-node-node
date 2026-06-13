@@ -23,6 +23,7 @@ func move():
 	#check for collision with a node
 
 func check_collision():
+	print(position)
 	if position == initial_position:
 		return
 	var node = TileManager.get_nodey(position.round()) 
