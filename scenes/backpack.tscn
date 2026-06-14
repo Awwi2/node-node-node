@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b2dh1o7bapg40" path="res://art/Button_hover.png" id="4_fytde"]
 [ext_resource type="Texture2D" uid="uid://c3c1uc3xbucvu" path="res://art/Button_pressed.png" id="4_yov5u"]
 [ext_resource type="Texture2D" uid="uid://bseqs2w5vwdfn" path="res://art/Button_disabled.png" id="6_owf8y"]
+[ext_resource type="PackedScene" uid="uid://cuwehglyimia7" path="res://scenes/draggable_node.tscn" id="8_45c70"]
 
 [node name="backpack" type="Node2D" unique_id=582537461]
 
@@ -50,99 +51,32 @@ ignore_texture_size = true
 stretch_mode = 3
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=996224911]
-custom_minimum_size = Vector2(50, 180)
-offset_left = 182.0
+clip_contents = false
+offset_left = 184.0
 offset_top = 3.0
-offset_right = 204.0
-offset_bottom = 3.0
+offset_right = 234.0
+offset_bottom = 183.0
 
-[node name="GridContainer" type="GridContainer" parent="ScrollContainer" unique_id=424840303]
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer" unique_id=904894309]
+layout_mode = 2
+theme_override_constants/margin_left = 9
+theme_override_constants/margin_top = 9
+theme_override_constants/margin_right = -18
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer/MarginContainer" unique_id=424840303]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
 columns = 2
 
-[node name="ColorRect" type="ColorRect" parent="ScrollContainer/GridContainer" unique_id=344090244]
-custom_minimum_size = Vector2(22.655, 19.54)
+[node name="Control" parent="ScrollContainer/MarginContainer/GridContainer" unique_id=1731226839 instance=ExtResource("8_45c70")]
 layout_mode = 2
 
-[node name="ColorRect7" type="ColorRect" parent="ScrollContainer/GridContainer" unique_id=2093197586]
-custom_minimum_size = Vector2(22.655, 19.54)
+[node name="Control2" parent="ScrollContainer/MarginContainer/GridContainer" unique_id=1031942691 instance=ExtResource("8_45c70")]
 layout_mode = 2
 
-[node name="ColorRect8" type="ColorRect" parent="ScrollContainer/GridContainer" unique_id=928314618]
-custom_minimum_size = Vector2(22.655, 19.54)
-layout_mode = 2
-
-[node name="ColorRect9" type="ColorRect" parent="ScrollContainer/GridContainer" unique_id=68077480]
-custom_minimum_size = Vector2(22.655, 19.54)
-layout_mode = 2
-
-[node name="ColorRect10" type="ColorRect" parent="ScrollContainer/GridContainer" unique_id=651260275]
-custom_minimum_size = Vector2(22.655, 19.54)
-layout_mode = 2
-
-[node name="ColorRect11" type="ColorRect" parent="ScrollContainer/GridContainer" unique_id=636547426]
-custom_minimum_size = Vector2(22.655, 19.54)
-layout_mode = 2
-
-[node name="ColorRect12" type="ColorRect" parent="ScrollContainer/GridContainer" unique_id=1484107324]
-custom_minimum_size = Vector2(22.655, 19.54)
-layout_mode = 2
-
-[node name="ColorRect13" type="ColorRect" parent="ScrollContainer/GridContainer" unique_id=1004098319]
-custom_minimum_size = Vector2(22.655, 19.54)
-layout_mode = 2
-
-[node name="ColorRect14" type="ColorRect" parent="ScrollContainer/GridContainer" unique_id=277866186]
-custom_minimum_size = Vector2(22.655, 19.54)
-layout_mode = 2
-
-[node name="ColorRect15" type="ColorRect" parent="ScrollContainer/GridContainer" unique_id=1735893679]
-custom_minimum_size = Vector2(22.655, 19.54)
-layout_mode = 2
-
-[node name="ColorRect16" type="ColorRect" parent="ScrollContainer/GridContainer" unique_id=1485109957]
-custom_minimum_size = Vector2(22.655, 19.54)
-layout_mode = 2
-
-[node name="ColorRect17" type="ColorRect" parent="ScrollContainer/GridContainer" unique_id=1328276839]
-custom_minimum_size = Vector2(22.655, 19.54)
-layout_mode = 2
-
-[node name="ColorRect18" type="ColorRect" parent="ScrollContainer/GridContainer" unique_id=1010289873]
-custom_minimum_size = Vector2(22.655, 19.54)
-layout_mode = 2
-
-[node name="ColorRect19" type="ColorRect" parent="ScrollContainer/GridContainer" unique_id=1390639725]
-custom_minimum_size = Vector2(22.655, 19.54)
-layout_mode = 2
-
-[node name="ColorRect20" type="ColorRect" parent="ScrollContainer/GridContainer" unique_id=679306378]
-custom_minimum_size = Vector2(22.655, 19.54)
-layout_mode = 2
-
-[node name="ColorRect21" type="ColorRect" parent="ScrollContainer/GridContainer" unique_id=555107869]
-custom_minimum_size = Vector2(22.655, 19.54)
-layout_mode = 2
-
-[node name="ColorRect2" type="ColorRect" parent="ScrollContainer/GridContainer" unique_id=1643293126]
-custom_minimum_size = Vector2(22.655, 19.54)
-layout_mode = 2
-
-[node name="ColorRect3" type="ColorRect" parent="ScrollContainer/GridContainer" unique_id=11088349]
-custom_minimum_size = Vector2(22.655, 19.54)
-layout_mode = 2
-
-[node name="ColorRect4" type="ColorRect" parent="ScrollContainer/GridContainer" unique_id=180119727]
-custom_minimum_size = Vector2(22.655, 19.54)
-layout_mode = 2
-
-[node name="ColorRect5" type="ColorRect" parent="ScrollContainer/GridContainer" unique_id=593028096]
-custom_minimum_size = Vector2(22.655, 19.54)
-layout_mode = 2
-
-[node name="ColorRect6" type="ColorRect" parent="ScrollContainer/GridContainer" unique_id=1609646204]
-custom_minimum_size = Vector2(22.655, 19.54)
+[node name="Control3" parent="ScrollContainer/MarginContainer/GridContainer" unique_id=946058591 instance=ExtResource("8_45c70")]
 layout_mode = 2
