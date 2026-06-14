@@ -25,6 +25,21 @@ func move():
 func check_collision():
 	if position == initial_position:
 		return
+	##if position.x < 11:
+		#OrbManager.remove_orb(self)
+		#return
+	if position.x > 175:
+		OrbManager.remove_orb(self)
+		return
+		#do attack
+	elif position.y < 8:
+		OrbManager.remove_orb(self)
+		StatsManager.heal(1)
+		return
+	elif position.y > 172:
+		StatsManager.add_block(1)
+		OrbManager.remove_orb(self)
+		return
 	var node = TileManager.get_nodey(position.round()) 
 	
 	#if we collide, give the orb to the node, that we collided with( the colidee will delete this orb)

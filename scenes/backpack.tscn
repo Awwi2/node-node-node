@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c3c1uc3xbucvu" path="res://art/Button_pressed.png" id="4_yov5u"]
 [ext_resource type="Texture2D" uid="uid://bseqs2w5vwdfn" path="res://art/Button_disabled.png" id="6_owf8y"]
 [ext_resource type="Texture2D" uid="uid://c820hjox1gr30" path="res://art/nine slice UI.png" id="7_owf8y"]
+[ext_resource type="PackedScene" uid="uid://dhvihmtjjiwj2" path="res://scenes/orb.tscn" id="8_45c70"]
 
 [node name="backpack" type="Node2D" unique_id=582537461]
 
@@ -76,10 +77,26 @@ flat = true
 autowrap_trim_flags = 0
 clip_text = true
 
+[node name="HealthLabel" type="Label" parent="ui_border" unique_id=2092508163]
+offset_left = 184.0
+offset_top = 3.0
+offset_right = 224.0
+offset_bottom = 12.0
+theme_override_font_sizes/font_size = 6
+text = "Health: "
+
+[node name="BlockLabel" type="Label" parent="ui_border" unique_id=2111873998]
+offset_left = 225.0
+offset_top = 3.0
+offset_right = 265.0
+offset_bottom = 12.0
+theme_override_font_sizes/font_size = 6
+text = "Block:"
+
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=996224911]
 clip_contents = false
 offset_left = 184.0
-offset_top = 3.0
+offset_top = 15.0
 offset_right = 234.0
 offset_bottom = 146.0
 
@@ -97,3 +114,6 @@ size_flags_vertical = 3
 theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 20
 columns = 2
+
+[node name="Node2D" parent="." unique_id=2131568563 instance=ExtResource("8_45c70")]
+position = Vector2(11, 122)

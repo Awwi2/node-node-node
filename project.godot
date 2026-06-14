@@ -21,6 +21,7 @@ TileManager="*uid://dcsd6pw6m6dv6"
 OrbManager="*uid://kuwhe1e83ly4"
 Globals="*uid://5ciwdw5l3tp8"
 InventoryManager="*uid://db4i07ep6ov42"
+StatsManager="*uid://bf8tf4tvgwyqh"
 
 [display]
 
