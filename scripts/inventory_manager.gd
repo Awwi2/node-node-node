@@ -9,11 +9,16 @@ var g_container
 func _ready() -> void:
 	g_container = get_tree().root.get_node("/root/backpack/ScrollContainer/MarginContainer/GridContainer")
 	
+	add_node(RELAY_NODE, [Vector2i.LEFT, 
+		Vector2i.UP])
+	add_node(RELAY_NODE, [Vector2i.RIGHT, 
+		Vector2i.UP])
 	add_node(RELAY_NODE, [Vector2i.RIGHT, Vector2i.LEFT, 
-		Vector2i.UP, Vector2i.DOWN])
+		 Vector2i.DOWN])
 	
 	add_node(PLUS_NODE, [Vector2i.RIGHT, Vector2i.LEFT, 
 		Vector2i.UP, Vector2i.DOWN])
+	add_node(PLUS_NODE, [Vector2i.UP, Vector2i.DOWN])
 	
 	add_node(HIVEMIND_NODE, [Vector2i.RIGHT, Vector2i.LEFT])
 	
