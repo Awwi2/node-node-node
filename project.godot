@@ -19,12 +19,21 @@ config/icon="res://icon.svg"
 
 TileManager="*uid://dcsd6pw6m6dv6"
 OrbManager="*uid://kuwhe1e83ly4"
+Globals="*uid://5ciwdw5l3tp8"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/scale=4.0
+
+[input]
+
+left_click={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(336, 9),"global_position":Vector2(348, 69),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
 
 [physics]
 
