@@ -20,10 +20,39 @@ var generator_node: Nodey
 var finish_setup_button:Button 
 
 func _ready():
+	var b1: TextureButton = get_node("/root/backpack/ui_border/SpawnButton1")
+	var b2: TextureButton = get_node("/root/backpack/ui_border/SpawnButton2")
+	var b3: TextureButton = get_node("/root/backpack/ui_border/SpawnButton3")
 	var b4: TextureButton = get_node("/root/backpack/ui_border/SpawnButton4")
+	var b5: TextureButton = get_node("/root/backpack/ui_border/SpawnButton5")
+	var b6: TextureButton = get_node("/root/backpack/ui_border/SpawnButton6")
+	var b7: TextureButton = get_node("/root/backpack/ui_border/SpawnButton7")
+	var b8: TextureButton = get_node("/root/backpack/ui_border/SpawnButton8")
+	var b9: TextureButton = get_node("/root/backpack/ui_border/SpawnButton9")
+	var b10: TextureButton = get_node("/root/backpack/ui_border/SpawnButton10")
 	finish_setup_button = get_node("/root/backpack/ui_border/NinePatchRect/FinishSetupButton")
 	
+	b1.pressed.connect(_on_spawn_button1_pressed)
+	b2.pressed.connect(_on_spawn_button2_pressed)
+	b3.pressed.connect(_on_spawn_button3_pressed)
 	b4.pressed.connect(_on_spawn_button4_pressed)
+	b5.pressed.connect(_on_spawn_button5_pressed)
+	b6.pressed.connect(_on_spawn_button6_pressed)
+	b7.pressed.connect(_on_spawn_button7_pressed)
+	b8.pressed.connect(_on_spawn_button8_pressed)
+	b9.pressed.connect(_on_spawn_button9_pressed)
+	b10.pressed.connect(_on_spawn_button10_pressed)
+	
+	b1.disabled = true
+	b2.disabled = true
+	b3.disabled = true
+	b4.disabled = true
+	b5.disabled = true
+	b6.disabled = true
+	b7.disabled = true
+	b8.disabled = true
+	b9.disabled = true
+	b10.disabled = true
 	finish_setup_button.pressed.connect(_on_finish_setup_button_pressed)
 	orbs = []
 	
@@ -69,11 +98,47 @@ func get_nodey(pos: Vector2i):
 	return tiles.get(pos)
 func is_open(pos: Vector2i) -> bool:
 	return tiles.get(pos) == null
-	
+func _on_spawn_button1_pressed():
+	if Globals.finished_setup:
+		var button_pos = get_node("/root/backpack/ui_border/SpawnButton1").position
+		spawn_button_orb(button_pos)
+func _on_spawn_button2_pressed():
+	if Globals.finished_setup:
+		var button_pos = get_node("/root/backpack/ui_border/SpawnButton2").position
+		spawn_button_orb(button_pos)
+func _on_spawn_button3_pressed():
+	if Globals.finished_setup:
+		var button_pos = get_node("/root/backpack/ui_border/SpawnButton3").position
+		spawn_button_orb(button_pos)
 func _on_spawn_button4_pressed():
 	if Globals.finished_setup:
 		var button_pos = get_node("/root/backpack/ui_border/SpawnButton4").position
 		spawn_button_orb(button_pos)
+func _on_spawn_button5_pressed():
+	if Globals.finished_setup:
+		var button_pos = get_node("/root/backpack/ui_border/SpawnButton5").position
+		spawn_button_orb(button_pos)
+func _on_spawn_button6_pressed():
+	if Globals.finished_setup:
+		var button_pos = get_node("/root/backpack/ui_border/SpawnButton6").position
+		spawn_button_orb(button_pos)
+func _on_spawn_button7_pressed():
+	if Globals.finished_setup:
+		var button_pos = get_node("/root/backpack/ui_border/SpawnButton7").position
+		spawn_button_orb(button_pos)
+func _on_spawn_button8_pressed():
+	if Globals.finished_setup:
+		var button_pos = get_node("/root/backpack/ui_border/SpawnButton8").position
+		spawn_button_orb(button_pos)
+func _on_spawn_button9_pressed():
+	if Globals.finished_setup:
+		var button_pos = get_node("/root/backpack/ui_border/SpawnButton9").position
+		spawn_button_orb(button_pos)
+func _on_spawn_button10_pressed():
+	if Globals.finished_setup:
+		var button_pos = get_node("/root/backpack/ui_border/SpawnButton10").position
+		spawn_button_orb(button_pos)
+		
 	
 func spawn_button_orb(button_pos):
 	var new_orb:Orb = ORB.instantiate()
@@ -114,6 +179,28 @@ func _on_finish_setup_button_pressed():
 	finish_setup_button.get_parent().visible = false
 	get_node("/root/backpack/ScrollContainer").visible = false
 	Globals.finished_setup = true
+	var b1: TextureButton = get_node("/root/backpack/ui_border/SpawnButton1")
+	var b2: TextureButton = get_node("/root/backpack/ui_border/SpawnButton2")
+	var b3: TextureButton = get_node("/root/backpack/ui_border/SpawnButton3")
+	var b4: TextureButton = get_node("/root/backpack/ui_border/SpawnButton4")
+	var b5: TextureButton = get_node("/root/backpack/ui_border/SpawnButton5")
+	var b6: TextureButton = get_node("/root/backpack/ui_border/SpawnButton6")
+	var b7: TextureButton = get_node("/root/backpack/ui_border/SpawnButton7")
+	var b8: TextureButton = get_node("/root/backpack/ui_border/SpawnButton8")
+	var b9: TextureButton = get_node("/root/backpack/ui_border/SpawnButton9")
+	var b10: TextureButton = get_node("/root/backpack/ui_border/SpawnButton10")
+
+	b1.disabled = false
+	b2.disabled = false
+	b3.disabled = false
+	b4.disabled = false
+	b5.disabled = false
+	b6.disabled = false
+	b7.disabled = false
+	b8.disabled = false
+	b9.disabled = false
+	b10.disabled = false
+
 	
 	
 	

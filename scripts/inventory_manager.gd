@@ -3,7 +3,7 @@ const DRAGGABLE_NODE = preload("uid://cuwehglyimia7")
 const RELAY_NODE = preload("uid://c6ipwji5grl0y")
 const PLUS_NODE = preload("uid://e0dh5t3j38u5")
 const HIVEMIND_NODE = preload("uid://cqktm02qtvuql")
-var g_container
+var g_container	
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

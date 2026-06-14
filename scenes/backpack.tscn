@@ -34,6 +34,30 @@ texture_disabled = ExtResource("6_owf8y")
 ignore_texture_size = true
 stretch_mode = 3
 
+[node name="SpawnButton2" type="TextureButton" parent="ui_border" unique_id=1217342304]
+offset_left = 3.0
+offset_top = 30.0
+offset_right = 11.0
+offset_bottom = 38.0
+texture_normal = ExtResource("3_8usr3")
+texture_pressed = ExtResource("4_yov5u")
+texture_hover = ExtResource("4_fytde")
+texture_disabled = ExtResource("6_owf8y")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="SpawnButton3" type="TextureButton" parent="ui_border" unique_id=531658438]
+offset_left = 3.0
+offset_top = 46.0
+offset_right = 11.0
+offset_bottom = 54.0
+texture_normal = ExtResource("3_8usr3")
+texture_pressed = ExtResource("4_yov5u")
+texture_hover = ExtResource("4_fytde")
+texture_disabled = ExtResource("6_owf8y")
+ignore_texture_size = true
+stretch_mode = 3
+
 [node name="SpawnButton4" type="TextureButton" parent="ui_border" unique_id=2031887295]
 anchors_preset = -1
 anchor_left = 0.034
@@ -44,6 +68,108 @@ offset_left = -7.880001
 offset_top = -8.020004
 offset_right = 0.11999893
 offset_bottom = -0.020004272
+texture_normal = ExtResource("3_8usr3")
+texture_pressed = ExtResource("4_yov5u")
+texture_hover = ExtResource("4_fytde")
+texture_disabled = ExtResource("6_owf8y")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="SpawnButton5" type="TextureButton" parent="ui_border" unique_id=236981999]
+anchors_preset = -1
+anchor_left = 0.034
+anchor_top = 0.38900003
+anchor_right = 0.034
+anchor_bottom = 0.38900003
+offset_left = -7.880001
+offset_top = 7.9799957
+offset_right = 0.11999893
+offset_bottom = 15.979996
+texture_normal = ExtResource("3_8usr3")
+texture_pressed = ExtResource("4_yov5u")
+texture_hover = ExtResource("4_fytde")
+texture_disabled = ExtResource("6_owf8y")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="SpawnButton6" type="TextureButton" parent="ui_border" unique_id=1927621169]
+anchors_preset = -1
+anchor_left = 0.034
+anchor_top = 0.38900003
+anchor_right = 0.034
+anchor_bottom = 0.38900003
+offset_left = -7.880001
+offset_top = 23.979996
+offset_right = 0.11999893
+offset_bottom = 31.979996
+texture_normal = ExtResource("3_8usr3")
+texture_pressed = ExtResource("4_yov5u")
+texture_hover = ExtResource("4_fytde")
+texture_disabled = ExtResource("6_owf8y")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="SpawnButton7" type="TextureButton" parent="ui_border" unique_id=689668894]
+anchors_preset = -1
+anchor_left = 0.034
+anchor_top = 0.38900003
+anchor_right = 0.034
+anchor_bottom = 0.38900003
+offset_left = -7.880001
+offset_top = 39.979996
+offset_right = 0.11999893
+offset_bottom = 47.979996
+texture_normal = ExtResource("3_8usr3")
+texture_pressed = ExtResource("4_yov5u")
+texture_hover = ExtResource("4_fytde")
+texture_disabled = ExtResource("6_owf8y")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="SpawnButton8" type="TextureButton" parent="ui_border" unique_id=61502956]
+anchors_preset = -1
+anchor_left = 0.034
+anchor_top = 0.38900003
+anchor_right = 0.034
+anchor_bottom = 0.38900003
+offset_left = -7.880001
+offset_top = 55.979996
+offset_right = 0.11999893
+offset_bottom = 63.979996
+texture_normal = ExtResource("3_8usr3")
+texture_pressed = ExtResource("4_yov5u")
+texture_hover = ExtResource("4_fytde")
+texture_disabled = ExtResource("6_owf8y")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="SpawnButton9" type="TextureButton" parent="ui_border" unique_id=78616728]
+anchors_preset = -1
+anchor_left = 0.034
+anchor_top = 0.38900003
+anchor_right = 0.034
+anchor_bottom = 0.38900003
+offset_left = -7.880001
+offset_top = 71.979996
+offset_right = 0.11999893
+offset_bottom = 79.979996
+texture_normal = ExtResource("3_8usr3")
+texture_pressed = ExtResource("4_yov5u")
+texture_hover = ExtResource("4_fytde")
+texture_disabled = ExtResource("6_owf8y")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="SpawnButton10" type="TextureButton" parent="ui_border" unique_id=374563910]
+anchors_preset = -1
+anchor_left = 0.034
+anchor_top = 0.38900003
+anchor_right = 0.034
+anchor_bottom = 0.38900003
+offset_left = -7.880001
+offset_top = 87.979996
+offset_right = 0.11999893
+offset_bottom = 95.979996
 texture_normal = ExtResource("3_8usr3")
 texture_pressed = ExtResource("4_yov5u")
 texture_hover = ExtResource("4_fytde")
