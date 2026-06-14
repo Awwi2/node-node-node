@@ -18,7 +18,7 @@ func init_node(pos_in, ports_in):
 
 func generate_orb(dir: Vector2i):
 	var new_orb:Orb = ORB.instantiate()
-	new_orb.init(position, dir)
+	new_orb.init(global_position, dir)
 	OrbManager.add_orb(new_orb) #now we never need to think about the orb ever again
 	
 @abstract func process_orb(orb:Orb)

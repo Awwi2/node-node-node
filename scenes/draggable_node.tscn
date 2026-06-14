@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://cuwehglyimia7"]
 
-[ext_resource type="Texture2D" uid="uid://de1hyntfuqtqm" path="res://icon.svg" id="1_1hf2c"]
 [ext_resource type="Script" uid="uid://chppm0sv2e3fw" path="res://scripts/draggable_node.gd" id="1_m1vp5"]
 
 [node name="Control" type="Control" unique_id=1731226839]
@@ -18,7 +17,6 @@ offset_left = -8.0
 offset_top = -8.0
 offset_right = 8.0
 offset_bottom = 8.0
-texture = ExtResource("1_1hf2c")
 expand_mode = 1
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

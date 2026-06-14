@@ -22,18 +22,18 @@ func _ready():
 	b4.pressed.connect(_on_spawn_button4_pressed)
 	orbs = []
 	
-	var test_node:Nodey = RELAY.instantiate()
-	test_node.position = Vector2(16*1+21, 16*3+18)
-	test_node.ports = [Vector2i.LEFT,Vector2i.RIGHT, Vector2i.UP]
-	tiles.set(test_node.position, test_node)
-	add_sibling.call_deferred(test_node)
-	
-	var plus_node:Nodey = PLUS_NODE.instantiate()
-	plus_node.position = Vector2(16*3+21,16*3+18)
-	plus_node.ports = [Vector2i.LEFT, Vector2i.RIGHT]
-	#plus_node.init_node(Vector2(128, 64), [Vector2i.LEFT, Vector2i.DOWN])
-	tiles.set(plus_node.position, plus_node)
-	add_sibling.call_deferred(plus_node)
+	#var test_node:Nodey = RELAY.instantiate()
+	#test_node.position = Vector2(16*1+21, 16*3+18)
+	#test_node.ports = [Vector2i.LEFT,Vector2i.RIGHT, Vector2i.UP]
+	#tiles.set(test_node.position, test_node)
+	#add_sibling.call_deferred(test_node)
+	#
+	#var plus_node:Nodey = PLUS_NODE.instantiate()
+	#plus_node.position = Vector2(16*3+21,16*3+18)
+	#plus_node.ports = [Vector2i.LEFT, Vector2i.RIGHT]
+	##plus_node.init_node(Vector2(128, 64), [Vector2i.LEFT, Vector2i.DOWN])
+	#tiles.set(plus_node.position, plus_node)
+	#add_sibling.call_deferred(plus_node)
 	
 
 func _process(delta: float) -> void:
@@ -73,4 +73,37 @@ func spawn_button_orb(button_pos):
 	var new_orb:Orb = ORB.instantiate()
 	new_orb.init(button_pos + Vector2(2,4), Vector2i.RIGHT)
 	OrbManager.add_orb(new_orb)
+	
+func create_node(pos: Vector2, node_type: String):
+	var new_node: Nodey
+	match node_type:
+		"Relay":
+			new_node = RELAY.instantiate()
+		"Plus":
+			new_node = PLUS_NODE.instantiate()
+	
+	if new_node == null:
+		push_error(str(node_type) + " is  an invalid node type!!! ")
+		return
+	new_node.position = pos
+	new_node.ports = [Vector2i.LEFT,Vector2i.RIGHT, Vector2i.UP]
+	tiles.set(new_node.position, new_node)
+	add_sibling.call_deferred(new_node)
+	return new_node
+
+func remove_node(node:Nodey):
+	print(tiles)
+	print("trying to remove: " + str(Vector2i(node.global_position)))
+	if not tiles.erase(Vector2i(node.global_position)):
+		print("uh oh")
+	#node.queue_free.call_deferred()
+	
+func add_node(node:Nodey):
+	print("called with")
+	print(node)
+	tiles.set(node.global_position, node)
+	print("placed at : " + str(node.global_position))
+	
+	
+	
 	

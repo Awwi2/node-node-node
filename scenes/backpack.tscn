@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://b2dh1o7bapg40" path="res://art/Button_hover.png" id="4_fytde"]
 [ext_resource type="Texture2D" uid="uid://c3c1uc3xbucvu" path="res://art/Button_pressed.png" id="4_yov5u"]
 [ext_resource type="Texture2D" uid="uid://bseqs2w5vwdfn" path="res://art/Button_disabled.png" id="6_owf8y"]
-[ext_resource type="PackedScene" uid="uid://cuwehglyimia7" path="res://scenes/draggable_node.tscn" id="8_45c70"]
 
 [node name="backpack" type="Node2D" unique_id=582537461]
 
@@ -71,12 +70,3 @@ size_flags_vertical = 3
 theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 20
 columns = 2
-
-[node name="Control" parent="ScrollContainer/MarginContainer/GridContainer" unique_id=1731226839 instance=ExtResource("8_45c70")]
-layout_mode = 2
-
-[node name="Control2" parent="ScrollContainer/MarginContainer/GridContainer" unique_id=1031942691 instance=ExtResource("8_45c70")]
-layout_mode = 2
-
-[node name="Control3" parent="ScrollContainer/MarginContainer/GridContainer" unique_id=946058591 instance=ExtResource("8_45c70")]
-layout_mode = 2
