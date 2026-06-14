@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b2dh1o7bapg40" path="res://art/Button_hover.png" id="4_fytde"]
 [ext_resource type="Texture2D" uid="uid://c3c1uc3xbucvu" path="res://art/Button_pressed.png" id="4_yov5u"]
 [ext_resource type="Texture2D" uid="uid://bseqs2w5vwdfn" path="res://art/Button_disabled.png" id="6_owf8y"]
+[ext_resource type="Texture2D" uid="uid://c820hjox1gr30" path="res://art/nine slice UI.png" id="7_owf8y"]
 
 [node name="backpack" type="Node2D" unique_id=582537461]
 
@@ -49,12 +50,38 @@ texture_disabled = ExtResource("6_owf8y")
 ignore_texture_size = true
 stretch_mode = 3
 
+[node name="NinePatchRect" type="NinePatchRect" parent="ui_border" unique_id=1698426371]
+texture_filter = 1
+offset_left = 184.0
+offset_top = 161.0
+offset_right = 234.0
+offset_bottom = 178.0
+texture = ExtResource("7_owf8y")
+region_rect = Rect2(0, 0, 10, 10)
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="FinishSetupButton" type="Button" parent="ui_border/NinePatchRect" unique_id=432578621]
+z_index = 1
+clip_contents = true
+layout_mode = 0
+offset_right = 50.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.34007114, 0.15114766, 0.29986733, 1)
+theme_override_font_sizes/font_size = 6
+text = "Finish Setup"
+flat = true
+autowrap_trim_flags = 0
+clip_text = true
+
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=996224911]
 clip_contents = false
 offset_left = 184.0
 offset_top = 3.0
 offset_right = 234.0
-offset_bottom = 183.0
+offset_bottom = 146.0
 
 [node name="MarginContainer" type="MarginContainer" parent="ScrollContainer" unique_id=904894309]
 layout_mode = 2

@@ -17,9 +17,14 @@ var orbs : Array[Orb]
 
 var generator_node: Nodey
 
+var finish_setup_button:Button 
+
 func _ready():
 	var b4: TextureButton = get_node("/root/backpack/ui_border/SpawnButton4")
+	finish_setup_button = get_node("/root/backpack/ui_border/NinePatchRect/FinishSetupButton")
+	
 	b4.pressed.connect(_on_spawn_button4_pressed)
+	finish_setup_button.pressed.connect(_on_finish_setup_button_pressed)
 	orbs = []
 	
 	#var test_node:Nodey = RELAY.instantiate()
@@ -66,8 +71,9 @@ func is_open(pos: Vector2i) -> bool:
 	return tiles.get(pos) == null
 	
 func _on_spawn_button4_pressed():
-	var button_pos = get_node("/root/backpack/ui_border/SpawnButton4").position
-	spawn_button_orb(button_pos)
+	if Globals.finished_setup:
+		var button_pos = get_node("/root/backpack/ui_border/SpawnButton4").position
+		spawn_button_orb(button_pos)
 	
 func spawn_button_orb(button_pos):
 	var new_orb:Orb = ORB.instantiate()
@@ -104,6 +110,10 @@ func add_node(node:Nodey):
 	tiles.set(node.global_position, node)
 	print("placed at : " + str(node.global_position))
 	
+func _on_finish_setup_button_pressed():
+	finish_setup_button.get_parent().visible = false
+	get_node("/root/backpack/ScrollContainer").visible = false
+	Globals.finished_setup = true
 	
 	
 	
