@@ -3,7 +3,9 @@ const DRAGGABLE_NODE = preload("uid://cuwehglyimia7")
 const RELAY_NODE = preload("uid://c6ipwji5grl0y")
 const PLUS_NODE = preload("uid://e0dh5t3j38u5")
 const HIVEMIND_NODE = preload("uid://cqktm02qtvuql")
-var g_container	
+const PORTAL_NODE = preload("uid://d3ioqjv7fbyne")
+var g_container
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -23,6 +25,10 @@ func _ready() -> void:
 	add_node(HIVEMIND_NODE, [Vector2i.RIGHT, Vector2i.LEFT])
 	
 	add_node(HIVEMIND_NODE, [Vector2i.RIGHT, Vector2i.LEFT])
+	
+	add_node(PORTAL_NODE, [Vector2i.RIGHT])
+	
+	add_node(PORTAL_NODE, [Vector2i.LEFT])
 
 func add_node(n, ports: Array[Vector2i]) -> void:
 	var d1:DraggableNode = DRAGGABLE_NODE.instantiate()

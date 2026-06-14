@@ -202,5 +202,6 @@ func _on_finish_setup_button_pressed():
 	b10.disabled = false
 
 	
-	
+func get_node_list() -> Dictionary[Vector2i,Nodey]:
+	return tiles
 	
