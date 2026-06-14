@@ -25,7 +25,7 @@ func _process(delta: float) -> void:
 			snap_pos = snap_pos * TileManager.GRID_SIZE
 			snap_pos = snap_pos + Globals.GRID_OFFSET
 			tween.tween_property(self, "global_position", snap_pos, 0.05).set_ease(Tween.EASE_OUT)
-			self.reparent(get_node("root/backpack"))			
+			self.reparent(get_tree().root.get_node("/root/backpack"))
 
 func _on_mouse_exited():
 	if not Globals.is_dragging:
