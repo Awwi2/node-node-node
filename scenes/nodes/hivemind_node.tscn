@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cqktm02qtvuql"]
+
+[ext_resource type="Script" uid="uid://dhwgihl4o5kxx" path="res://scripts/nodes/hivemind_node.gd" id="1_pwal5"]
+[ext_resource type="PackedScene" uid="uid://ctu6xhgevyfit" path="res://scenes/pipes.tscn" id="2_h8pm4"]
+[ext_resource type="Texture2D" uid="uid://3cj7up7635k2" path="res://art/nodes.png" id="3_vrgk2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pwal5"]
+atlas = ExtResource("3_vrgk2")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h8pm4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pwal5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="hivemind_node" type="Node2D" unique_id=187735481]
+script = ExtResource("1_pwal5")
+
+[node name="Pipes" parent="." unique_id=1129022952 instance=ExtResource("2_h8pm4")]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=858086756]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_h8pm4")
